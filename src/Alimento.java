@@ -35,10 +35,8 @@ public class Alimento {
 
     @Override
     public String toString() {
-        return "Alimento{" +
-                "Nome: '" + nome + '\'' +
-                ", Calorias: " + calorias +
-                '}';
+        return nome +
+                " | " + calorias + " calorias";
     }
 
     @Override

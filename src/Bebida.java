@@ -32,6 +32,6 @@ public class Bebida extends Alimento {
     
     @Override
     public String toString() {
-        return super.toString() + ", Alcoólica: " + (alcoolica ? "Sim" : "Não");
+        return super.toString() + " | Alcoólica: " + (alcoolica ? "Sim" : "Não");
     }
 }
