@@ -16,6 +16,7 @@ public class mainGUI extends javax.swing.JFrame {
     private ArrayList<Object> frutas;
     private ArrayList<Object> bebidas;
     private ArrayList<Object> sabores;
+    private ArrayList<registoDiario> registos;
     /**
      * Creates new form mainGUI
      */
@@ -25,6 +26,7 @@ public class mainGUI extends javax.swing.JFrame {
         frutas = new ArrayList<>();
         bebidas = new ArrayList<>();
 	sabores = new ArrayList<>();
+	registos = new ArrayList<>();
     }
 
     /**
@@ -110,9 +112,7 @@ public class mainGUI extends javax.swing.JFrame {
 	inserirAlimento inserirGUI = new inserirAlimento(alimentos, frutas, bebidas,sabores);
         inserirGUI.setVisible(true);
         inserirGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-	System.out.println(alimentos);
-	System.out.println(frutas);
-	System.out.println(bebidas);
+	
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -125,7 +125,7 @@ public class mainGUI extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-	registarDia registrarGUI = new registarDia(alimentos, frutas, bebidas,sabores);
+	registarDia registrarGUI = new registarDia(alimentos, frutas, bebidas,sabores, registos);
         registrarGUI.setVisible(true);
         registrarGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButton3ActionPerformed

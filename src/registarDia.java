@@ -5,6 +5,8 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 /**
  *
  * @author david
@@ -15,18 +17,19 @@ public class registarDia extends javax.swing.JFrame {
     private ArrayList<Object> frutas;
     private ArrayList<Object> bebidas;
     private ArrayList<Object> sabores;
-    private ArrayList<String> registroDia = new ArrayList<>();
+    private ArrayList<registoDiario> registos;
     private DefaultListModel<String> listModel = new DefaultListModel<>();
     private DefaultListModel<String> TodaylistModel = new DefaultListModel<>();
     private LocalDate currentDate = LocalDate.now();
     /**
      * Creates new form registarDia
      */
-    public registarDia(ArrayList<Alimento> alimentos, ArrayList<Object> frutas, ArrayList<Object> bebidas,ArrayList<Object> sabores) {
+    public registarDia(ArrayList<Alimento> alimentos, ArrayList<Object> frutas, ArrayList<Object> bebidas,ArrayList<Object> sabores, ArrayList<registoDiario> registos) {
         this.alimentos = alimentos;
         this.frutas = frutas;
         this.bebidas = bebidas;
 	this.sabores = sabores;
+	this.registos = registos;
         initComponents();
         InitLists();
     }
@@ -106,22 +109,35 @@ public class registarDia extends javax.swing.JFrame {
         int[] indices = jList1.getSelectedIndices();
         for (int index : indices) {
 	    String selectedItem = listModel.getElementAt(index);
-            registroDia.add(currentDate.toString() + ": " + listModel.getElementAt(index));
+            
 	    //Add current selected item to the new list model
-	    TodaylistModel.addElement(selectedItem);
+	    this.TodaylistModel.addElement(selectedItem);
         }
-        this.jList2.setModel(TodaylistModel); //Update the list of the current date
+        this.jList2.setModel(this.TodaylistModel); //Update the list of the current date
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:\
+	Date currentDate = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String dateString = dateFormat.format(currentDate);
+
+        ArrayList<Object> selectedItems = new ArrayList<>();
+        
+        
+	int totalItems = this.TodaylistModel.size();
+        for (int i = 0; i < totalItems; i++) {
+	    String selectedItem = this.TodaylistModel.getElementAt(i);
+            selectedItems.add(selectedItem);
+        }
+        registoDiario registo = new registoDiario(currentDate, selectedItems);
+        registos.add(registo);
+	System.out.println(registos.get(0).toString());
 	// Close the window
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    public ArrayList<String> getRegistroDia() {
-        return registroDia;
-    }
+  
     
     private void InitLists(){
 	for (Alimento alimento : alimentos) {
@@ -165,7 +181,7 @@ public class registarDia extends javax.swing.JFrame {
 	/* Create and display the form */
 	java.awt.EventQueue.invokeLater(new Runnable() {
 	    public void run() {
-		new registarDia(null, null, null,null).setVisible(true); // Pass the actual lists
+		new registarDia(null, null, null,null,null).setVisible(true); // Pass the actual lists
 	    }
 	});
     }
