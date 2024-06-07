@@ -126,11 +126,14 @@ public class registarDia extends javax.swing.JFrame {
         
         
 	int totalItems = this.TodaylistModel.size();
+	System.out.println("total list items: "+totalItems);
         for (int i = 0; i < totalItems; i++) {
 	    String selectedItem = this.TodaylistModel.getElementAt(i);
             selectedItems.add(selectedItem);
+	    System.out.println("selected item:" + selectedItem);
         }
-        registoDiario registo = new registoDiario(currentDate, selectedItems);
+	System.out.println("all selected items: "+ selectedItems.toString());
+        registoDiario registo = new registoDiario(currentDate, new ArrayList<>(selectedItems));
         registos.add(registo);
 	System.out.println(registos.get(0).toString());
 	// Close the window
