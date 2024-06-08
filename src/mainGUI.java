@@ -27,6 +27,7 @@ public class mainGUI extends javax.swing.JFrame {
         bebidas = new ArrayList<>();
 	sabores = new ArrayList<>();
 	registos = new ArrayList<>();
+	setLocationRelativeTo(null);
     }
 
     /**
@@ -132,6 +133,7 @@ public class mainGUI extends javax.swing.JFrame {
 	inserirAlimento inserirGUI = new inserirAlimento(alimentos, frutas, bebidas,sabores);
         inserirGUI.setVisible(true);
         inserirGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	inserirGUI.setLocationRelativeTo(null);
 	
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -140,7 +142,7 @@ public class mainGUI extends javax.swing.JFrame {
 	listarAlimentos listarGUI = new listarAlimentos(alimentos, frutas, bebidas,sabores);
         listarGUI.setVisible(true);
         listarGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-	
+	listarGUI.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -148,6 +150,7 @@ public class mainGUI extends javax.swing.JFrame {
 	registarDia registarGUI = new registarDia(alimentos, frutas, bebidas,sabores, registos);
         registarGUI.setVisible(true);
         registarGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	registarGUI.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -155,6 +158,7 @@ public class mainGUI extends javax.swing.JFrame {
 	verRegistos listarGUI = new verRegistos(registos);
         listarGUI.setVisible(true);
         listarGUI.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	listarGUI.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
