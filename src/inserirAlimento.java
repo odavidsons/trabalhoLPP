@@ -23,6 +23,7 @@ public class inserirAlimento extends javax.swing.JFrame {
         this.bebidas = bebidas;
 	this.sabores = sabores;
         initComponents();
+	initSelection();
     }
 
     /**
@@ -46,16 +47,20 @@ public class inserirAlimento extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Nome");
 
+        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("Tipo");
 
+        jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alimento", "Fruta", "Bebida" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,14 +68,25 @@ public class inserirAlimento extends javax.swing.JFrame {
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setText("Calorias");
 
+        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setText("Alcoólica");
 
+        jCheckBox1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jCheckBox1.setText("Sim/Não");
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel5.setText("Sabor");
 
+        jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        jButton1.setBackground(new java.awt.Color(102, 102, 102));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Inserir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,32 +99,30 @@ public class inserirAlimento extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addGap(66, 66, 66))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel3)
-                                .addComponent(jLabel5))
-                            .addGap(57, 57, 57)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jTextField1)
-                    .addComponent(jTextField2)
-                    .addComponent(jTextField3))
-                .addContainerGap(53, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(111, 111, 111))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(65, 65, 65)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel5))))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTextField1)
+                            .addComponent(jTextField2)
+                            .addComponent(jCheckBox1)
+                            .addComponent(jTextField3)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addComponent(jButton1)))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,17 +139,17 @@ public class inserirAlimento extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jCheckBox1))
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
+                .addGap(32, 32, 32)
                 .addComponent(jButton1)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
@@ -175,34 +189,71 @@ public class inserirAlimento extends javax.swing.JFrame {
 	}
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    //Make sure that only the fields related to the selected item are enable on first window boot
+    private void initSelection() {
+	// Get the selected item
+        selectedOption = this.jComboBox1.getSelectedItem().toString();
+        
+	// Enable/disable text fields based on the selected item
+	switch (selectedOption) {
+	    case "Alimento":
+		this.jTextField1.setEnabled(true);  // Nome
+		this.jTextField2.setEnabled(true);  // Calorias
+		this.jCheckBox1.setEnabled(false);  // Alcoólica
+		this.jTextField3.setEnabled(false); // Sabor
+		break;
+	    case "Fruta":
+		this.jTextField1.setEnabled(true);  // Nome
+		this.jTextField2.setEnabled(true);  // Calorias
+		this.jCheckBox1.setEnabled(false);  // Alcoólica
+		this.jTextField3.setEnabled(false);  // Sabor
+		break;
+	    case "Bebida":
+		this.jTextField1.setEnabled(true);  // Nome
+		this.jTextField2.setEnabled(true);  // Calorias
+		this.jCheckBox1.setEnabled(true);   // Alcoólica
+		this.jTextField3.setEnabled(true); // Sabor
+		break;
+	    default:
+		break;
+	}
+    }
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 	String nome = jTextField1.getText();
-        int calorias = Integer.parseInt(jTextField2.getText());
+	try {
+	    int calorias = Integer.parseInt(jTextField2.getText());
 
-        switch (selectedOption) {
-            case "Alimento":
-                Alimento alimento = new Alimento(nome, calorias);
-                alimentos.add(alimento);
-                break;
-            case "Fruta":
-                Fruta fruta = new Fruta(nome,calorias, nome); // Replace with the actual Fruta class
-                frutas.add(fruta);
-                break;
-            case "Bebida":
-                boolean alcoolica = jCheckBox1.isSelected();
-                String novo_sabor = jTextField3.getText();
-                Bebida bebida = new Bebida(nome, calorias, alcoolica); // Replace with the actual Bebida class
-		Sabor sabor = new Sabor(nome,calorias,alcoolica, novo_sabor);
-                bebidas.add(bebida);
-		sabores.add(sabor);
-                break;
-            default:
-                break;
-        }
-
-        // Close the window
-        this.dispose();
+	    switch (selectedOption) {
+		case "Alimento":
+		    Alimento alimento = new Alimento(nome, calorias);
+		    alimentos.add(alimento);
+		    break;
+		case "Fruta":
+		    Fruta fruta = new Fruta(nome,calorias, nome); // Replace with the actual Fruta class
+		    frutas.add(fruta);
+		    break;
+		case "Bebida":
+		    boolean alcoolica = jCheckBox1.isSelected();
+		    String novo_sabor = jTextField3.getText();
+		    Bebida bebida = new Bebida(nome, calorias, alcoolica); // Replace with the actual Bebida class
+		    if (novo_sabor != null && !novo_sabor.isEmpty()) {
+			Sabor sabor = new Sabor(nome,calorias,alcoolica, novo_sabor);
+			sabores.add(sabor);
+		    }
+		    bebidas.add(bebida);
+		    
+		    break;
+		default:
+		    break;
+	    }
+	    // Close the window
+	    this.dispose();
+	} catch (Exception e) {
+	    System.out.println("Incorrect value type.");
+	}
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
  

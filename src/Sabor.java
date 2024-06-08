@@ -29,4 +29,9 @@ public class Sabor extends Bebida {
         super.print();
         System.out.println("Sabor: " + sabor);
     }
+
+    @Override
+    public String toString() {
+	return "Sabor: " + sabor + '}';
+    }
 }

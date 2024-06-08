@@ -42,6 +42,8 @@ public class listarAlimentos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
         jTextArea1.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -88,6 +90,10 @@ public class listarAlimentos extends javax.swing.JFrame {
         this.jTextArea1.append("\nBebidas:\n");
         for (Object bebida : bebidas) {
             this.jTextArea1.append(bebida.toString() + "\n");
+        }
+	this.jTextArea1.append("\nSabores:\n");
+        for (Object sabor : sabores) {
+            this.jTextArea1.append(sabor.toString() + "\n");
         }
     }
     /**
